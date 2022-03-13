@@ -1,10 +1,27 @@
+
 pipeline {
-    agent any 
+    agent any
+
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'Hello world!' 
+                echo 'Building project..'
             }
         }
+        stage('Test') {
+            steps {
+                echo 'Testing project..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying project....'
+            }
+        }
+	stage('unwanted'){
+	steps{
+		echo 'Hello World!'
+		}
+	}
     }
 }
